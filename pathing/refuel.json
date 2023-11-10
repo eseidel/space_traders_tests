@@ -1,0 +1,57 @@
+{
+    "ship": {
+        "speed": 30,
+        "fuelCapacity": 50,
+        "fuel": 50
+    },
+    "systems": [
+        {
+            "symbol": "A",
+            "waypoints": [
+                {
+                    "symbol": "A",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "symbol": "B",
+                    "x": 80,
+                    "y": 0
+                },
+                {
+                    "symbol": "C",
+                    "x": 40,
+                    "y": 0,
+                    "sellsFuel": true
+                }
+            ]
+        }
+    ],
+    "tests": [
+        {
+            "start": "A-A",
+            "end": "A-B",
+            "expect": {
+                "route": [
+                    {
+                        "action": "NAV-CRUISE",
+                        "start": "A-A",
+                        "end": "A-C"
+                    },
+                    {
+                        "action": "REFUEL",
+                        "start": "A-C",
+                        "end": "A-C"
+                    },
+                    {
+                        "action": "NAV-CRUISE",
+                        "start": "A-C",
+                        "end": "A-B"
+                    }
+                ],
+                "fuelUsed": 80,
+                "time": 96
+            }
+        }
+    ]
+}

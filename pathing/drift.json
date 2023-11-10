@@ -1,0 +1,41 @@
+{
+    "ship": {
+        "speed": 30,
+        "fuelCapacity": 50,
+        "fuel": 50
+    },
+    "systems": [
+        {
+            "symbol": "A",
+            "waypoints": [
+                {
+                    "symbol": "A",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "symbol": "B",
+                    "x": 80,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "tests": [
+        {
+            "start": "A-A",
+            "end": "A-B",
+            "expect": {
+                "route": [
+                    {
+                        "action": "NAV-DRIFT",
+                        "start": "A-A",
+                        "end": "A-B"
+                    }
+                ],
+                "fuelUsed": 1,
+                "time": 681
+            }
+        }
+    ]
+}
