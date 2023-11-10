@@ -27,8 +27,11 @@
             "end": "A-B",
             "expect": {
                 "route": [
-                    "A-A",
-                    "A-B"
+                    {
+                        "action": "NAV-CRUISE",
+                        "start": "A-A",
+                        "end": "A-B"
+                    }
                 ],
                 "fuelUsed": 100,
                 "time": 98
@@ -39,8 +42,11 @@
             "end": "A-A",
             "expect": {
                 "route": [
-                    "A-B",
-                    "A-A"
+                    {
+                        "action": "NAV-CRUISE",
+                        "start": "A-B",
+                        "end": "A-A"
+                    }
                 ],
                 "fuelUsed": 100,
                 "time": 98
