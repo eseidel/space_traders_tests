@@ -33,6 +33,27 @@
                 "fuelUsed": 100,
                 "time": 98
             }
+        },
+        {
+            "start": "A-B",
+            "end": "A-A",
+            "expect": {
+                "route": [
+                    "A-B",
+                    "A-A"
+                ],
+                "fuelUsed": 100,
+                "time": 98
+            }
+        },
+        {
+            "start": "A-B",
+            "end": "A-B",
+            "expect": {
+                "route": [],
+                "fuelUsed": 0,
+                "time": 0
+            }
         }
     ]
 }
